@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       registeralert.style.display = "none";
-      showlogin();
+      window.showlogin();
     }, 4000);
   };
 
@@ -99,6 +99,26 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Listen for changes
     registerForm.addEventListener("input", updateButtonState);
+  }
+
+
+  const loginForm = document.getElementById("loginsection");
+  const loginBtn = document.getElementById("loginbtn");
+
+  if (loginForm && loginBtn) {
+    const updateLoginButtonState = () => {
+      loginBtn.disabled = !loginForm.checkValidity();
+    };
+
+    updateLoginButtonState();
+    loginForm.addEventListener("input", updateLoginButtonState);
+  }
+
+  if (registerForm) {
+    registerForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      window.showregisteralert();
+    });
   }
 
 });
