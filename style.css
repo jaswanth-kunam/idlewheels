@@ -238,7 +238,7 @@ header{
     font-size: 1.4rem;
     font-weight: 500;
 }
-.rental-boxh4{
+.rental-box h4{
     font-size: 0.94rem;
     font-weight: 500;
     color: var(--text-alter-color);
@@ -274,7 +274,7 @@ header{
 }
 .footer-content{
     display: grid;
-    grid-template-columns: repeat(4 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     padding: 40px 0 30px;
 }
@@ -339,7 +339,7 @@ header{
     position: absolute;
 }
 .login-img{
-    background-image: url(images/home-background.jpg);
+    background-image: url(home-background.jpg);
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -588,7 +588,7 @@ button:disabled{
         flex-direction: column;
         align-items: normal;
     }
-    .imput-box{
+    .input-box{
         flex: none;
     }
     .input-border{
