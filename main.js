@@ -121,13 +121,4 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (loginForm) {
-    loginForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      if (!loginForm.checkValidity()) return;
-      window.location.href = "home.html";
-    });
-  }
-
-
 });
