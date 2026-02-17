@@ -17,6 +17,35 @@ window.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove("open-menu");
     });
   }
+  // User dropdown toggle
+const userIcon = document.getElementById("user-icon");
+const userDropdown = document.getElementById("user-dropdown");
+
+userIcon.addEventListener("click", () => {
+    userDropdown.classList.toggle("active");
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".user-menu")) {
+        userDropdown.classList.remove("active");
+    }
+});
+// LOGOUT FUNCTION
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Remove logged user from storage
+    localStorage.removeItem("loggedInUser");
+
+    // Redirect to login page
+    window.location.href = "login.html";
+  });
+}
+
 
   // ---------------- DATE SETUP ----------------
   const startDateInput = document.getElementById("start-date");
